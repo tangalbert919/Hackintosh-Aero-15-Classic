@@ -30,7 +30,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
      * could trigger randomly.
      */
 
-    /**
     External (_SB_.PCI0.LPCB.ECDV, DeviceObj)
 
     Scope (\_SB.PCI0.LPCB.ECDV)
@@ -47,7 +46,6 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "SsdtEC", 0x00001000)
             }
         }
     }
-    **/
 
     Scope (\_SB)
     {
