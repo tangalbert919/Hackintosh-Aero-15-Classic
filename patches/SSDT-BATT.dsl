@@ -2,7 +2,7 @@
     Author: Isaac Mitsuaki Saito
     SSDT patch for working battery status
 */
-DefinitionBlock("", "SSDT", 2, "hack", "batt", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "BATT", 0)
 {
     External(_SB.PCI0.AMW0, DeviceObj)
     External(_SB.PCI0.AMW0.XMBD, MethodObj)
