@@ -1,0 +1,219 @@
+00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 07)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd 8th Gen Core Processor Host Bridge/DRAM Registers
+	Flags: bus master, fast devsel, latency 0
+	Capabilities: <access denied>
+	Kernel driver in use: skl_uncore
+
+00:01.0 PCI bridge: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16) (rev 07) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 122
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: 00005000-00005fff [size=4K]
+	Memory behind bridge: 64000000-650fffff [size=17M]
+	Prefetchable memory behind bridge: 0000000050000000-00000000620fffff [size=289M]
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Mobile) (prog-if 00 [VGA controller])
+	DeviceName: Onboard - Video
+	Subsystem: Gigabyte Technology Co., Ltd UHD Graphics 630 (Mobile)
+	Flags: bus master, fast devsel, latency 0, IRQ 171
+	Memory at 63000000 (64-bit, non-prefetchable) [size=16M]
+	Memory at 40000000 (64-bit, prefetchable) [size=256M]
+	I/O ports at 6000 [size=64]
+	[virtual] Expansion ROM at 000c0000 [disabled] [size=128K]
+	Capabilities: <access denied>
+	Kernel driver in use: i915
+	Kernel modules: i915
+
+00:12.0 Signal processing controller: Intel Corporation Cannon Lake PCH Thermal Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH Thermal Controller
+	Flags: fast devsel, IRQ 16
+	Memory at 65f20000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: intel_pch_thermal
+	Kernel modules: intel_pch_thermal
+
+00:14.0 USB controller: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller (rev 10) (prog-if 30 [XHCI])
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH USB 3.1 xHCI Host Controller
+	Flags: bus master, medium devsel, latency 0, IRQ 153
+	Memory at 65f00000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+
+00:14.2 RAM memory: Intel Corporation Cannon Lake PCH Shared SRAM (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Intel Corporation Cannon Lake PCH Shared SRAM
+	Flags: fast devsel
+	Memory at 65f18000 (64-bit, non-prefetchable) [disabled] [size=8K]
+	Memory at 65f1f000 (64-bit, non-prefetchable) [disabled] [size=4K]
+	Capabilities: <access denied>
+
+00:14.3 Network controller: Intel Corporation Wireless-AC 9560 [Jefferson Peak] (rev 10)
+	DeviceName: Onboard - Ethernet
+	Subsystem: Bigfoot Networks, Inc. Wireless-AC 9560 [Jefferson Peak]
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at 65f14000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: iwlwifi
+	Kernel modules: iwlwifi
+
+00:15.0 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #0 (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH Serial IO I2C Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at 65f1e000 (64-bit, non-prefetchable) [size=4K]
+	Memory at 65f1d000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+
+00:15.1 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH Serial IO I2C Controller #1 (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH Serial IO I2C Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 17
+	[virtual] Memory at 62100000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+
+00:16.0 Communication controller: Intel Corporation Cannon Lake PCH HECI Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH HECI Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 156
+	Memory at 65f1b000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+
+00:1b.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #19 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 123
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	I/O behind bridge: 00004000-00004fff [size=4K]
+	Memory behind bridge: 65e00000-65efffff [size=1M]
+	Prefetchable memory behind bridge: None
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+00:1b.4 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #21 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 124
+	Bus: primary=00, secondary=03, subordinate=03, sec-latency=0
+	I/O behind bridge: None
+	Memory behind bridge: 65d00000-65dfffff [size=1M]
+	Prefetchable memory behind bridge: None
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+00:1d.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #9 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 125
+	Bus: primary=00, secondary=04, subordinate=04, sec-latency=0
+	I/O behind bridge: None
+	Memory behind bridge: 65c00000-65cfffff [size=1M]
+	Prefetchable memory behind bridge: None
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+00:1d.4 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #13 (rev f0) (prog-if 00 [Normal decode])
+	Flags: bus master, fast devsel, latency 0, IRQ 126
+	Bus: primary=00, secondary=05, subordinate=05, sec-latency=0
+	I/O behind bridge: 00003000-00003fff [size=4K]
+	Memory behind bridge: 65200000-65bfffff [size=10M]
+	Prefetchable memory behind bridge: 0000000062200000-0000000062bfffff [size=10M]
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+00:1f.0 ISA bridge: Intel Corporation Device a30d (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Device 1664
+	Flags: bus master, medium devsel, latency 0
+
+00:1f.3 Audio device: Intel Corporation Cannon Lake PCH cAVS (rev 10)
+	DeviceName: Onboard - Sound
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH cAVS
+	Flags: bus master, fast devsel, latency 32, IRQ 172
+	Memory at 65f10000 (64-bit, non-prefetchable) [size=16K]
+	Memory at 65100000 (64-bit, non-prefetchable) [size=1M]
+	Capabilities: <access denied>
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel, snd_sof_pci
+
+00:1f.4 SMBus: Intel Corporation Cannon Lake PCH SMBus Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH SMBus Controller
+	Flags: medium devsel, IRQ 16
+	Memory at 65f1a000 (64-bit, non-prefetchable) [size=256]
+	I/O ports at efa0 [size=32]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+
+00:1f.5 Serial bus controller [0c80]: Intel Corporation Cannon Lake PCH SPI Controller (rev 10)
+	DeviceName: Onboard - Other
+	Subsystem: Gigabyte Technology Co., Ltd Cannon Lake PCH SPI Controller
+	Flags: fast devsel
+	Memory at fe010000 (32-bit, non-prefetchable) [size=4K]
+	Kernel driver in use: intel-spi
+	Kernel modules: intel_spi_pci
+
+01:00.0 VGA compatible controller: NVIDIA Corporation TU106M [GeForce RTX 2070 Mobile] (rev a1) (prog-if 00 [VGA controller])
+	Subsystem: Gigabyte Technology Co., Ltd TU106M [GeForce RTX 2070 Mobile]
+	Flags: bus master, fast devsel, latency 0, IRQ 16
+	Memory at 64000000 (32-bit, non-prefetchable) [size=16M]
+	Memory at 50000000 (64-bit, prefetchable) [size=256M]
+	Memory at 60000000 (64-bit, prefetchable) [size=32M]
+	I/O ports at 5000 [size=128]
+	[virtual] Expansion ROM at 65000000 [disabled] [size=512K]
+	Capabilities: <access denied>
+	Kernel driver in use: nvidia
+	Kernel modules: nouveau, nvidia_drm, nvidia
+
+01:00.1 Audio device: NVIDIA Corporation TU106 High Definition Audio Controller (rev a1)
+	Subsystem: Gigabyte Technology Co., Ltd TU106 High Definition Audio Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 17
+	Memory at 65080000 (32-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+
+01:00.2 USB controller: NVIDIA Corporation TU106 USB 3.1 Host Controller (rev a1) (prog-if 30 [XHCI])
+	Subsystem: Gigabyte Technology Co., Ltd TU106 USB 3.1 Host Controller
+	Flags: fast devsel, IRQ 154
+	Memory at 62000000 (64-bit, prefetchable) [size=256K]
+	Memory at 62040000 (64-bit, prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+
+01:00.3 Serial bus controller [0c80]: NVIDIA Corporation TU106 USB Type-C UCSI Controller (rev a1)
+	Subsystem: Gigabyte Technology Co., Ltd TU106 USB Type-C UCSI Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 155
+	Memory at 65084000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: nvidia-gpu
+	Kernel modules: i2c_nvidia_gpu
+
+02:00.0 Ethernet controller: Qualcomm Atheros Killer E2500 Gigabit Ethernet Controller (rev 10)
+	Subsystem: Gigabyte Technology Co., Ltd Killer E2500 Gigabit Ethernet Controller
+	Flags: bus master, fast devsel, latency 0, IRQ 18
+	Memory at 65e00000 (64-bit, non-prefetchable) [size=256K]
+	I/O ports at 4000 [size=128]
+	Capabilities: <access denied>
+	Kernel driver in use: alx
+	Kernel modules: alx
+
+03:00.0 Non-Volatile memory controller: Intel Corporation SSD Pro 7600p/760p/E 6100p Series (rev 03) (prog-if 02 [NVM Express])
+	Subsystem: Intel Corporation SSD Pro 7600p/760p/E 6100p Series
+	Flags: bus master, fast devsel, latency 0, IRQ 16, NUMA node 0
+	Memory at 65d00000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: nvme
+
+04:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM981/PM981/PM983 (prog-if 02 [NVM Express])
+	Subsystem: Samsung Electronics Co Ltd NVMe SSD Controller SM981/PM981/PM983
+	Flags: bus master, fast devsel, latency 0, IRQ 16, NUMA node 0
+	Memory at 65c00000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: nvme
+
