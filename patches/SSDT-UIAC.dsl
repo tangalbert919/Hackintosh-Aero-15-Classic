@@ -63,7 +63,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0)
                     "HS14", Package() // WiFi Bluetooth
                     {
                         "UsbConnector", 255,
-                        "port", Buffer() {14, 0, 0, 0 },
+                        "port", Buffer() { 14, 0, 0, 0 },
+                    },
+                    "SS01", Package() // USB-C DisplayPort
+                    {
+                        "UsbConnector", 3,
+                        "port", Buffer() { 17, 0, 0, 0 },
                     },
                     "SS02", Package() // Far Right
                     {
@@ -73,9 +78,9 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0)
                     "SS03", Package() // Left
                     {
                         "UsbConnector", 3,
-                        "port", Buffer() { 19, 0, 0, 0 },
+                        "port", Buffer() { 19, 0, 0, 0},
                     },
-                    "SS04", Package() // Near Right
+                    "SS04", Package() // Near Right (includes Thunderbolt)
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 20, 0, 0, 0 },
@@ -84,23 +89,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0)
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 21, 0, 0, 0 },
-                    },
-                },
-            },
-            "8086_15db", Package()
-            {
-                "port-count", Buffer() { 26, 0, 0, 0 },
-                "ports", Package()
-                {
-                    "SSP1", Package()
-                    {
-                        "UsbConnector", 9,
-                        "port", Buffer() { 3, 0, 0, 0 },
-                    },
-                    "SSP2", Package()
-                    {
-                        "UsbConnector", 9,
-                        "port", Buffer() { 4, 0, 0, 0 },
                     },
                 },
             },
