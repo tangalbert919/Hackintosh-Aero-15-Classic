@@ -6,7 +6,7 @@ Hackintosh files for Gigabyte Aero 15 Classic. Not to be confused with [Aero 15 
 
 ```
 - Processor: Intel Core i7-9750H (all models)/i9-9980HK (YA only)
-- Memory: Up to 32 GB Samsung DDR4 2666 MHz
+- Memory: Up to 64 GB Samsung DDR4 2666 MHz
 - Panel:
   - FHD (1920x1080):
     - LG 144Hz IPS LCD anti-glare display (SA/WA)

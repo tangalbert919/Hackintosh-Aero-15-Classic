@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200110 (64-bit version)
+ * AML/ASL+ Disassembler version 20200214 (32-bit version)
  * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of DSDT.aml, Fri Feb 14 19:11:22 2020
+ * Disassembly of DSDT.aml, Mon Aug 17 14:45:19 2020
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00042B75 (273269)
+ *     Length           0x00042B12 (273170)
  *     Revision         0x02
- *     Checksum         0xD3
+ *     Checksum         0xB5
  *     OEM ID           "GBT   "
  *     OEM Table ID     "GBTUACPI"
  *     OEM Revision     0x01072009 (17244169)
@@ -307,7 +307,7 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
     Name (TBEF, 0x15)
     Name (TBDM, 0x17)
     Name (TBDB, 0x16)
-    Name (TBU0, 0xFF)
+    Name (TBU0, 0x06)
     Name (TBU1, 0xFF)
     Name (FMBL, One)
     Name (FDTP, 0x02)
@@ -22457,9 +22457,9 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
             ADBG ("End-of-XTBT")
         }
 
-        Method (ATBT, 0, NotSerialized)
+        Method (_E28, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
         {
-            ADBG ("ATBT")
+            ADBG ("_E28")
             If ((CGST == Zero))
             {
                 If ((RPN0 == One))
@@ -22476,7 +22476,7 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
                 XTBT (RPS1, RPT1)
             }
 
-            ADBG ("End-of-ATBT")
+            ADBG ("End-of-_E28")
         }
 
         Method (BTBT, 0, NotSerialized)
@@ -60112,7 +60112,6 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
             {
                 Case (0xFA)
                 {
-                    ^^LPCB.ECDV.CRAF = Arg2
                 }
                 Case (0x77)
                 {
@@ -60199,10 +60198,7 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
                 }
                 Case (0x57)
                 {
-                    ^^LPCB.ECDV.TFAN = Zero
                     ^^LPCB.ECDV.GFAN = Zero
-                    ^^LPCB.ECDV.TENF = Zero
-                    ^^LPCB.ECDV.FANB = Zero
                     ^^LPCB.ECDV.CRAF = Arg2
                     Return (^^LPCB.ECDV.CRAF) /* \_SB_.PCI0.LPCB.ECDV.CRAF */
                 }
@@ -60299,7 +60295,6 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
                 {
                     Case (0xFA)
                     {
-                        Return (^^LPCB.ECDV.CRAF) /* \_SB_.PCI0.LPCB.ECDV.CRAF */
                     }
                     Case (0xF7)
                     {
@@ -60879,11 +60874,6 @@ DefinitionBlock ("", "DSDT", 2, "GBT   ", "GBTUACPI", 0x01072009)
                     If ((Zero == ACTT))
                     {
                         CFAN = Zero
-                    }
-
-                    If (Zero)
-                    {
-                        CRAF = Zero
                     }
 
                     ^^^GFX0.CLID = LSTE /* \_SB_.PCI0.LPCB.ECDV.LSTE */

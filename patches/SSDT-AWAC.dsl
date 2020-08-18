@@ -14,12 +14,9 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "AWAC", 0x00000000)
 
     Scope (_SB)
     {
-        Method (_INI, 0, NotSerialized)  // _INI: Initialize
+        If (_OSI ("Darwin"))
         {
-            If (_OSI ("Darwin"))
-            {
-                STAS = One
-            }
+            STAS = One
         }
     }
 }

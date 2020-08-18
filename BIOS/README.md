@@ -12,7 +12,7 @@
 * [UEFITool](https://github.com/LongSoft/UEFITool/releases)
 * [ifrextract](https://github.com/LongSoft/Universal-IFR-Extractor/releases)
 * [7-zip](https://7-zip.org) (to extract the tools needed from the Intel CSME System Tools v12 RAR file).
-* Your BIOS flashed to version FB02 or FB04 (latest).
+* Your BIOS flashed to the latest version (at the time of writing this document, FB04).
 * Secure Boot disabled (go into BIOS and choose `Delete all secure boot variables`, this will NOT reset your computer).
 * A USB stick. Seriously.
 
