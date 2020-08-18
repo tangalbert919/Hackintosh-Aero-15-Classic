@@ -1,4 +1,4 @@
-# How to unlock your BIOS
+# Unlocking your BIOS
 
 **DISCLAIMER 1: UNLOCK YOUR BIOS AT YOUR OWN RISK! I AM NOT RESPONSIBLE FOR ANY DAMAGE CAUSED TO YOUR LAPTOP.**
 
@@ -19,16 +19,14 @@
 You should have these files in this directory just to make things easy.
 
 ## Instructions
-1. Extract `FPTw.exe` and its DLLs from the Intel CSME System Tools v12 RAR file (it can be found in `Intel CSME System Tools\Flash Programming Tools`) to this directory.
-2. Run CMD (not PowerShell) as administrator and `CD` to this directory. Run `FPTw.exe -bios -d biosreg.bin` to extract your BIOS.
-3. Run **UEFITools** and open `biosreg.bin`. Search for `AMITSE` (Press `Ctrl+F` and click on the tab marked `text`), then choose the first choice that says `"Unicode text "AMITSE" found in User interface section at offset 0h"`. Right click on `PEP32 image section` and choose `Replace as is...`:
-  * If you are on BIOS version FB02, select the file `Section_PE32_image_AMITSE_unlocked_BIOS-FB02.sct.` If on FB04, select `Section_PE32_image_AMITSE_unlocked_BIOS-FB04.sct`.
-  * After that, save the file in UEFITools as `biosmod.bin`.
-4. Open `AMIBCP5` (extract it from the RAR file first) and open `biosmod.bin`. Set the menu access to USER, as shown [here](https://i.imgur.com/BnkU0RW.jpg).
-5. Once you have saved the file, run `FPTw.exe -bios -f biosmod.bin`
- - If you get the error `Error 167: Protected Range Registers are currently set by BIOS, preventing flash access.`, your BIOS is locked and needs to be unlocked.
+
+You can follow the instructions on this guide [here](https://www.bios-mods.com/forum/Thread-Gigabyte-Aero-15-v8-FB0A-BIOS-Unlocked). Even though this is for an older Aero 15, the procedure is (more or less) the same.
+ * In case that link is not working, you can read [this guide](https://www.win-raid.com/t4386f16-OverPowered-TONGFANG-CyberPower-Machrevo-MACHENIKE-Unlocked-BIOS-Guide-W-Files.html). The system in this guide is not an Aero 15, but both systems use the same BIOS.
+While following the instructions, a few things to keep in mind:
+ * Don't download the AMITSE section image file (.sct) from the guides. You want to use the file that was included in this repository.
+ * The BIOS Lock offset for the Aero 15 Classic and the Aero 15 v8 are not the same. You will need to figure out what yours is.
  
- How to unlock your BIOS:
+ How to release your BIOS Lock:
    i. Format a USB stick to FAT32, and create directory `EFI\BOOT`. Download and extract BOOTx64.EFI from [here](http://brains.by/posts/bootx64.7z) and place it into the directory.
    ii. Boot from that USB stick (may require you to go into BIOS and change the boot order with the stick being the first entry). Run `setup_var 0xB48 0x00`.
    iii. Reboot to Windows, and run the command in step 5 again.
