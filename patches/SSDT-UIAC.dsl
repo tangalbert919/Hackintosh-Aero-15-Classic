@@ -55,15 +55,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0)
                         "UsbConnector", 255,
                         "port", Buffer() { 9, 0, 0, 0 },
                     },
+					"HS10", Package() // WiFi Bluetooth
+                    {
+                        "UsbConnector", 255,
+                        "port", Buffer() { 10, 0, 0, 0 },
+                    },
                     "HS11", Package() // Keyboard
                     {
                         "UsbConnector", 255,
                         "port", Buffer() { 11, 0, 0, 0 },
-                    },
-                    "HS14", Package() // WiFi Bluetooth
-                    {
-                        "UsbConnector", 255,
-                        "port", Buffer() { 14, 0, 0, 0 },
                     },
                     "SS01", Package() // USB-C DisplayPort
                     {
