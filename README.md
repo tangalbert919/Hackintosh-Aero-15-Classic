@@ -49,34 +49,47 @@ Misc (all models):
 ## What's working
 
 **USB Devices**
-[x] All USB ports (2.0 + 3.1)
-[ ] SD Card Reader (3.0)
-[x] HD Camera (2.0)
-[x] Keyboard (2.0)
-[ ] Bluetooth (Internal)
+- [x] All USB ports (2.0 + 3.1)
+- [ ] SD Card Reader (3.0)
+- [x] HD Camera (2.0)
+- [x] Keyboard (2.0)
+- [ ] Bluetooth (Internal)
 
 **Network**
-[x] Ethernet port
-[x] Wi-Fi
-[ ] Bluetooth
+- [x] Ethernet port
+- [x] Wi-Fi (Intel cards now work)
+- [ ] Bluetooth
 
 **Power**
-[ ] CPU power management
-[ ] Battery indicator
-[ ] Shutdown/Sleep/Restart
-[x] Disable dGPU to save power
+- [ ] CPU power management
+- [ ] Battery indicator
+- [ ] Shutdown/Sleep/Restart
+- [x] Disable dGPU to save power
 
 **Graphics**
-[x] Intel Graphics card
+- [x] Intel Graphics card
 
 **Misc**
-[x] Sound (internal speakers + audio jack)
-[ ] Touchpad + Gestures
-[ ] Thunderbolt hotplug
+- [x] Sound (internal speakers + audio jack)
+- [ ] Touchpad + Gestures
+- [ ] Thunderbolt hotplug
 
 ### Notes:
 * This repo is based off of [the Hackintosh Aero 15X repo](https://github.com/zacmks/Hackintosh-Aero-15X).
 * NVIDIA GeForce RTX GPUs (and GTX 1660 Ti) are not supported on any macOS version; they must be disabled.
+* Killer Wireless cards are all Intel Wi-Fi cards with some rebranding.
 
 ### Special thanks to:
 * [zacmks](https://github.com/zacmks/Hackintosh-Aero-15X) for already hacking an older Aero 15, which served as a base for this repo.
+
+* [RehabMan](https://github.com/RehabMan) for his guides, tools, kexts, and other contributions to the community.
+
+* [CorpNewt](https://github.com/corpnewt) for his tools (SSDTTime, gibMacOS, ProperTree).
+
+* [The OpenCore Team](https://github.com/acidanthera) for OpenCore and other needed kexts.
+
+* [OpenIntelWireless](https://github.com/OpenIntelWireless) for making Intel Wi-Fi cards finally work on macOS.
+
+### TODO:
+* Maybe add support for other Aero 15 models and Aero 17 models. The W9/X9/Y9 models don't have anything yet.
+* Tell zacmks that Intel Wi-Fi chips work on macOS now, because of OpenIntelWireless.

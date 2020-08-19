@@ -1,10 +1,6 @@
 # Unlocking your BIOS
 
-**DISCLAIMER 1: UNLOCK YOUR BIOS AT YOUR OWN RISK! I AM NOT RESPONSIBLE FOR ANY DAMAGE CAUSED TO YOUR LAPTOP.**
-
-**DISCLAIMER 2: THIS IS FOR GIGABYTE AERO 15 CLASSIC-(SA/WA/XA/YA) MODELS ONLY! DO NOT ATTEMPT ON OTHER MODELS!**
-
-**DISCLAIMER 3: DO ALL OF THIS ON WINDOWS! I CANNOT STRESS HOW IMPORTANT IT IS TO DO THIS ON WINDOWS!!!**
+**DISCLAIMER:** **Proceed at your own risk!** Unlocking your BIOS can brick your laptop if done incorrectly.
 
 ## Requirements
 * Intel CSME System Tools v12 (not v11 or 13+, v12). Download it from section C2 [here](https://www.win-raid.com/t596f39-Intel-Management-Engine-Drivers-Firmware-amp-System-Tools.html).
@@ -24,13 +20,12 @@ You can follow the instructions on this guide [here](https://www.bios-mods.com/f
  * In case that link is not working, you can read [this guide](https://www.win-raid.com/t4386f16-OverPowered-TONGFANG-CyberPower-Machrevo-MACHENIKE-Unlocked-BIOS-Guide-W-Files.html). The system in this guide is not an Aero 15, but both systems use the same BIOS.
 While following the instructions, a few things to keep in mind:
  * Don't download the AMITSE section image file (.sct) from the guides. You want to use the file that was included in this repository.
- * The BIOS Lock offset for the Aero 15 Classic and the Aero 15 v8 are not the same. You will need to figure out what yours is.
- 
+ * You need to release your BIOS lock if you want to flash your unlocked BIOS.
+ * The BIOS Lock offset for the Aero 15 Classic and the Aero 15 v8 are not the same. You will need to figure out what yours is. On my Classic-XA, it was 0xB48.
+
  How to release your BIOS Lock:
-   i. Format a USB stick to FAT32, and create directory `EFI\BOOT`. Download and extract BOOTx64.EFI from [here](http://brains.by/posts/bootx64.7z) and place it into the directory.
-   ii. Boot from that USB stick (may require you to go into BIOS and change the boot order with the stick being the first entry). Run `setup_var 0xB48 0x00`.
-   iii. Reboot to Windows, and run the command in step 5 again.
-   
-6. If the flashing is successful, run `FPTw.exe -greset`
-7. Press F2. Expect to see a lot more options in most tabs.
-   
+   * Format a USB stick to FAT32, and create directory `EFI\BOOT`. Download and extract BOOTx64.EFI from [here](http://brains.by/posts/bootx64.7z) and place it into the directory.
+   * Boot from that USB stick (may require you to go into BIOS and change the boot order with the stick being the first entry). Run `setup_var <BIOS lock offset> 0x00`, replacing `<BIOS lock offset>` with your actual BIOS lock offset.
+   * Reboot to Windows.
+
+These instructions might also work with later Aero 15 (and possibly Aero 17) systems, but again, proceed with caution.
