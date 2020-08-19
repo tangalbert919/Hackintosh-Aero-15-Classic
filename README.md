@@ -12,7 +12,7 @@ Hackintosh files for Gigabyte Aero 15 Classic. Not to be confused with [Aero 15 
     - LG 144Hz IPS LCD anti-glare display (SA/WA)
     - SHARP 240Hz IGZO LCD anti-glare display (XA/YA)
   - UHD (3840x2160):
-    - AUO 60Hz Adobe RGB 100% IPS LCD anti-glare display (WA/XA/YA)
+    - AUO 60Hz Adobe RGB 100% IPS LCD anti-glare display (all models)
 - Graphics:
   - Integrated: Intel UHD Graphics 630
   - Dedicated:
@@ -47,10 +47,36 @@ Misc (all models):
   * `BIOS`: Unlocked BIOS file + instructions
 
 ## What's working
-[ ] All USB ports (2.0 + 3.1)
+
+**USB Devices**
+[x] All USB ports (2.0 + 3.1)
+[ ] SD Card Reader (3.0)
+[x] HD Camera (2.0)
+[x] Keyboard (2.0)
+[ ] Bluetooth (Internal)
+
+**Network**
+[x] Ethernet port
+[x] Wi-Fi
+[ ] Bluetooth
+
+**Power**
+[ ] CPU power management
+[ ] Battery indicator
+[ ] Shutdown/Sleep/Restart
+[x] Disable dGPU to save power
+
+**Graphics**
+[x] Intel Graphics card
+
+**Misc**
+[x] Sound (internal speakers + audio jack)
+[ ] Touchpad + Gestures
+[ ] Thunderbolt hotplug
 
 ### Notes:
 * This repo is based off of [the Hackintosh Aero 15X repo](https://github.com/zacmks/Hackintosh-Aero-15X).
-* Killer Wireless AC-1550 (Intel 9560) must be replaced with a compatible Wi-Fi chip. Broadcom BCM94352Z is recommended.
 * NVIDIA GeForce RTX GPUs (and GTX 1660 Ti) are not supported on any macOS version; they must be disabled.
-* You will need to unlock your BIOS. Instructions are provided in the `BIOS` folder.
+
+### Special thanks to:
+* [zacmks](https://github.com/zacmks/Hackintosh-Aero-15X) for already hacking an older Aero 15, which served as a base for this repo.
