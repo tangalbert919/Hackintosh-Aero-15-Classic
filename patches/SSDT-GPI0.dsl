@@ -1,17 +1,37 @@
-// Source: https://github.com/daliansky/OC-little
-DefinitionBlock("", "SSDT", 2, "DRTNIA", "GPI0", 0)
+// Custom GPI0 patch, should allow for multi-boot.
+DefinitionBlock("", "SSDT", 2, "AXIRO", "GPI0", 0)
 {
-    External(GPHD, FieldUnitObj)
-
-    Scope (\)
+    External(_SB_.PCI0.GPI0, DeviceObj)
+	External(_SB_.PCI0.I2C1.TPD0, DeviceObj)
+	External(GPHD, FieldUnitObj)
+	
+	Scope (_SB.PCI0.GPI0)
     {
-        If (_OSI ("Darwin"))
+        Method (_STA, 0, NotSerialized)  // _STA: Status
         {
-            GPHD = Zero
-        }
-        Else
-        {
-
+		    If (_OSI ("Darwin"))
+			{
+                Return (0x0F)
+			}
+			If ((GPHD == One))
+			{
+			    Return (0x03)
+		    }
+			
+			Return (Zero)
         }
     }
+	
+	Scope (_SB.PCI0.I2C1.TPD0)
+	{
+	    Name (SBFG, ResourceTemplate()
+		{
+		    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
+			    "\\_SB.PCI0.GPI0", 0x00, ResourceConsumer, ,
+			    )
+			    {   // Pin list
+			        0x4A
+		        }
+		})
+	}
 }
