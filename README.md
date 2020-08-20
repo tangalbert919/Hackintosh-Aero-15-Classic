@@ -1,6 +1,6 @@
 # Hackintosh Aero 15 Classic
 
-Hackintosh files for Gigabyte Aero 15 Classic. Not to be confused with [Aero 15 W9/X9/Y9](https://www.gigabyte.com/Laptop/AERO-15--RTX-20-Series#kf).
+Hackintosh files for Gigabyte Aero 15 Classic. Not to be confused with [Aero 15 W9/X9/Y9](https://www.gigabyte.com/Laptop/AERO-15--RTX-20-Series).
 
 ## Specs
 
@@ -53,12 +53,12 @@ Misc (all models):
 - [ ] SD Card Reader (3.0)
 - [x] HD Camera (2.0)
 - [x] Keyboard (2.0)
-- [ ] Bluetooth (Internal)
+- [x] Bluetooth (Internal)
 
 **Network**
 - [x] Ethernet port
 - [x] Wi-Fi (Intel cards now work)
-- [ ] Bluetooth
+- [x] Bluetooth
 
 **Power**
 - [ ] CPU power management
@@ -92,4 +92,3 @@ Misc (all models):
 
 ### TODO:
 * Maybe add support for other Aero 15 models and Aero 17 models. The W9/X9/Y9 models don't have anything yet.
-* Tell zacmks that Intel Wi-Fi chips work on macOS now, because of OpenIntelWireless.
