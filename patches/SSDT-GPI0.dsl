@@ -22,6 +22,7 @@ DefinitionBlock("", "SSDT", 2, "AXIRO", "GPI0", 0)
         }
     }
 	
+	// Fix the trackpad.
 	Scope (_SB.PCI0.I2C1.TPD0)
 	{
 	    Name (SBFG, ResourceTemplate()

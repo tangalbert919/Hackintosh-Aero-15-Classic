@@ -26,15 +26,15 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Comment</key>
-				<string>Create fake EC, fix USB power</string>
+				<string>Fix USB power</string>
 				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
+				<string>SSDT-USBX.aml</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
 				<false/>
 				<key>Comment</key>
-				<string>Fix I2C Trackpad (not ready yet)</string>
+				<string>Fix I2C Trackpad</string>
 				<key>Path</key>
 				<string>SSDT-GPI0.aml</string>
 			</dict>
@@ -106,13 +106,13 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>_Q11 to XQ11</string>
+				<string>Rename ECDV to EC (maybe not needed)</string>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
-				<data>X1ExMQ==</data>
+				<data>RUNEVg==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -120,7 +120,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WFExMQ==</data>
+				<data>RUNfXw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -128,33 +128,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>_Q12 to XQ12</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>X1ExMg==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>WFExMg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
+				<data>AAAAAA==</data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -281,7 +255,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable audio output</string>
+				<string>Add audio support</string>
 				<key>Enabled</key>
 				<true/>
 				<key>MaxKernel</key>
@@ -417,17 +391,17 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>BundlePath</key>
-				<string>itlwm.kext</string>
+				<string>itlwm_v1.0.0_stable.kext</string>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/itlwm</string>
+				<string>Contents/MacOS/itlwmx</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Measure battery readout (patch not ready yet)</string>
+				<string>Measure battery readout</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -764,9 +738,9 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmCfgLock</key>
-			<true/>
+			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
 			<key>AppleXcpmForceBoost</key>
@@ -845,17 +819,31 @@
 		<array>
 			<dict>
 				<key>Arguments</key>
-				<string></string>
+				<string>initrd=/intel-ucode.img initrd=/initramfs-linux.img root=UUID=c1683bf5-eed1-4c39-b134-6ca7fa778500 rw</string>
 				<key>Auxiliary</key>
 				<false/>
 				<key>Comment</key>
-				<string>Not signed for security reasons</string>
+				<string>Needed to boot Arch Linux</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Name</key>
-				<string>CustomOS</string>
+				<string>Arch Linux</string>
 				<key>Path</key>
-				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+				<string>PciRoot(0x0)/Pci(0x1B,0x4)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)/HD(1,GPT,9D96DA65-E9FB-4C43-B139-F810405382C4,0x800,0x82000)/\vmlinuz-linux</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string>initrd=/initramfs-linux-fallback.img root=UUID=c1683bf5-eed1-4c39-b134-6ca7fa778500 rw</string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>Boot fallback kernel for Arch Linux</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>Arch Linux Fallback</string>
+				<key>Path</key>
+				<string>PciRoot(0x0)/Pci(0x1B,0x4)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)/HD(1,GPT,9D96DA65-E9FB-4C43-B139-F810405382C4,0x800,0x82000)/\vmlinuz-linux</string>
 			</dict>
 		</array>
 		<key>Security</key>
