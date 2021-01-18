@@ -49,7 +49,7 @@ Misc (all models):
 ## What's working
 
 **USB Devices**
-- [x] All USB ports (2.0 + 3.1)
+- [x] All USB ports (3.0 + 3.1)
 - [ ] SD Card Reader (3.0)
 - [x] HD Camera (2.0)
 - [x] Keyboard (2.0)
@@ -62,7 +62,7 @@ Misc (all models):
 
 **Power**
 - [ ] CPU power management
-- [ ] Battery indicator
+- [x] Battery indicator
 - [ ] Shutdown/Sleep/Restart
 - [x] Disable dGPU to save power
 
