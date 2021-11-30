@@ -1,11 +1,15 @@
 // Custom GPI0 patch, should allow for multi-boot.
 DefinitionBlock("", "SSDT", 2, "AXIRO", "GPI0", 0)
 {
-    External(_SB_.PCI0.GPI0, DeviceObj)
-	External(_SB_.PCI0.I2C1.TPD0, DeviceObj)
+    //External(_SB_.PCI0.GPI0, DeviceObj)
+	//External(_SB_.PCI0.I2C1.TPD0, DeviceObj)
 	External(GPHD, FieldUnitObj)
 	
-	Scope (_SB.PCI0.GPI0)
+	If (_OSI("Darwin"))
+	{
+		GPHD = Zero
+	}
+	/*Scope (_SB.PCI0.GPI0)
     {
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
@@ -17,13 +21,12 @@ DefinitionBlock("", "SSDT", 2, "AXIRO", "GPI0", 0)
 			{
 			    Return (0x03)
 		    }
-			
 			Return (Zero)
         }
-    }
+    }*/
 	
 	// Fix the trackpad.
-	Scope (_SB.PCI0.I2C1.TPD0)
+	/*Scope (_SB.PCI0.I2C1.TPD0)
 	{
 	    Name (SBFG, ResourceTemplate()
 		{
@@ -34,5 +37,5 @@ DefinitionBlock("", "SSDT", 2, "AXIRO", "GPI0", 0)
 			        0x4A
 		        }
 		})
-	}
+	}*/
 }

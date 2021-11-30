@@ -36,7 +36,7 @@
 				<key>Comment</key>
 				<string>Fix I2C Trackpad</string>
 				<key>Path</key>
-				<string>SSDT-GPIO.aml</string>
+				<string>SSDT-GPI0.aml</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
